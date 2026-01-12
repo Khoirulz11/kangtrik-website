@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://listrikjogja.netlify.app/sitemap.xml
