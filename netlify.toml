@@ -1,14 +1,28 @@
 [build]
   publish = "/"
+  command = "" 
 
+# ================= SECURITY HEADERS =================
 [[headers]]
   for = "/*"
   [headers.values]
+    # Security
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Cache-Control = "public, max-age=3600"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    
+    # Performance
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    
+    # SEO & User Experience
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' https://kit.fontawesome.com https://www.googletagmanager.com 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com"
+    
+    # Modern web standards
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
+# ================= ASSET CACHING =================
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -23,9 +37,96 @@
   for = "/img/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    # Optimasi gambar modern
+    Accept-Ranges = "bytes"
+    Vary = "Accept-Encoding"
 
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ================= ERROR PAGES =================
+[[headers]]
+  for = "/404.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+# Custom 404 page
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
   conditions = {Status = "404"}
+
+# ================= SEO REDIRECTS =================
+# Redirect trailing slash untuk konsistensi SEO
+[[redirects]]
+  from = "/*/"
+  to = "/:splat"
+  status = 301
+
+# Redirect uppercase to lowercase (SEO best practice)
+[[redirects]]
+  from = "/:path*/:file"
+  to = "/:path/:file"
+  status = 301
+  conditions = {Path = "/([^/]*[A-Z][^/]*)"}
+
+# ================= SITEMAP & ROBOTS =================
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+    Cache-Control = "public, max-age=86400"
+
+# ================= FAVICON & MANIFEST =================
+[[headers]]
+  for = "/img/favicon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=604800"
+
+# ================= BROWSER COMPATIBILITY =================
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Vary = "Accept-Encoding"
+
+# ================= API & THIRD PARTY =================
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+# ================= BACKUP & MAINTENANCE =================
+# [[redirects]]
+#   from = "/*"
+#   to = "/maintenance.html"
+#   status = 503
+#   force = true
+
+# ================= ENVIRONMENT VARIABLES =================
+[context.production.environment]
+  NODE_VERSION = "18"
+  NODE_ENV = "production"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
