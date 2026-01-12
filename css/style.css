@@ -1,5 +1,3 @@
-/* style.css - CSS UNIFIED untuk semua halaman ListrikPro */
-
 :root {
     --midnight-blue: #0F172A;
     --electric-blue: #2563EB;
@@ -1378,4 +1376,5 @@ header.scrolled {
         flex-direction: column;
         gap: 20px;
     }
+
 }
