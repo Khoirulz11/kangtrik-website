@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni - ListrikPro Jasa Listrik Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-bolt logo-icon"></i>
+                    <span>ListrikPro</span>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                    <a href="testimoni.html" class="nav-link active">Testimoni</a>
+                    <a href="#" class="nav-link">Layanan</a>
+                    <a href="#" class="nav-link">Tentang</a>
+                    <a href="#" class="nav-link">Kontak</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Testimoni -->
+    <section class="testimoni-hero">
+        <div class="container">
+            <h1 class="hero-title">Testimoni Pelanggan</h1>
+            <p class="hero-subtitle">Lihat apa kata ratusan pelanggan yang telah mempercayakan kebutuhan listrik mereka kepada ListrikPro. Kepuasan pelanggan adalah prioritas utama kami.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" id="testimoni-count">0</div>
+                    <div class="stat-label">Testimoni Positif</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="client-count">0</div>
+                    <div class="stat-label">Klien Puas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9<span style="font-size: 2rem; color: var(--cool-gray);">/5</span></div>
+                    <div class="stat-label">Rating Rata-rata</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="project-count">0</div>
+                    <div class="stat-label">Proyek Selesai</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Section -->
+    <section class="rating-section">
+        <div class="container">
+            <div class="rating-container">
+                <div class="average-rating">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-score">4.9</div>
+                    <div class="rating-total">dari 5.0</div>
+                </div>
+                
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <div class="rating-label">5 Bintang</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="bar-5"></div>
+                        </div>
+                        <div class="bar-percentage">85%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">4 Bintang</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="bar-4"></div>
+                        </div>
+                        <div class="bar-percentage">12%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">3 Bintang</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="bar-3"></div>
+                        </div>
+                        <div class="bar-percentage">2%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">2 Bintang</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="bar-2"></div>
+                        </div>
+                        <div class="bar-percentage">1%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">1 Bintang</div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="bar-1"></div>
+                        </div>
+                        <div class="bar-percentage">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Grid -->
+    <section class="testimoni-section">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+            <p class="section-subtitle">Testimoni langsung dari pelanggan yang telah menggunakan jasa ListrikPro untuk berbagai kebutuhan instalasi dan perbaikan listrik.</p>
+            
+            <div class="testimoni-grid">
+                <!-- Testimoni 1 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">AB</div>
+                        <div class="client-info">
+                            <h4>Ahmad Budiman</h4>
+                            <p class="client-location">Jakarta Selatan</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">"Sangat profesional dan cepat tanggap! Listrik rumah saya bermasalah di malam hari, teknisi datang kurang dari 1 jam dan memperbaikinya dengan sempurna. Terima kasih ListrikPro!"</p>
+                    <span class="testimoni-service">Perbaikan Listrik</span>
+                </div>
+                
+                <!-- Testimoni 2 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">SD</div>
+                        <div class="client-info">
+                            <h4>Sari Dewi</h4>
+                            <p class="client-location">Depok</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">"Instalasi listrik untuk cafe baru saya ditangani dengan sangat baik. Teknisinya ramah, menjelaskan setiap proses, dan hasilnya rapi. Pelanggan merasa nyaman dengan pencahayaan yang tepat."</p>
+                    <span class="testimoni-service">Instalasi Komersial</span>
+                </div>
+                
+                <!-- Testimoni 3 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">RW</div>
+                        <div class="client-info">
+                            <h4>Rudi Wijaya</h4>
+                            <p class="client-location">Tangerang</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">"Proses tambah daya listrik dari 900VA ke 1300VA berjalan lancar. Petugas membantu dari pengurusan dokumen hingga instalasi. Hasilnya rapi dan aman. Recommended!"</p>
+                    <span class="testimoni-service">Tambah Daya Listrik</span>
+                </div>
+                
+                <!-- Testimoni 4 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">LM</div>
+                        <div class="client-info">
+                            <h4>Lisa Mulyani</h4>
+                            <p class="client-location">Bekasi</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimoni-text">"Pasang MCB dan panel listrik di rumah 2 lantai. Pekerjaan selesai tepat waktu, rapi, dan teknisi menjelaskan fungsi setiap komponen. Harga transparan, tidak ada biaya tambahan."</p>
+                    <span class="testimoni-service">Pasang MCB & Panel</span>
+                </div>
+                
+                <!-- Testimoni 5 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">BS</div>
+                        <div class="client-info">
+                            <h4>Bambang Sutrisno</h4>
+                            <p class="client-location">Jakarta Timur</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">"Konsleting listrik di kantor menyebabkan beberapa komputer mati. Tim ListrikPro datang cepat, menemukan masalah, dan memperbaikinya. Sekarang sistem listrik lebih aman dengan MCB baru."</p>
+                    <span class="testimoni-service">Perbaikan & Konsleting</span>
+                </div>
+                
+                <!-- Testimoni 6 -->
+                <div class="testimoni-card">
+                    <div class="testimoni-header">
+                        <div class="client-avatar">TP</div>
+                        <div class="client-info">
+                            <h4>Tina Pratiwi</h4>
+                            <p class="client-location">Jakarta Pusat</p>
+                        </div>
+                    </div>
+                    <div class="testimoni-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimoni-text">"Penggantian kWh meter rusak dilakukan dengan profesional. Teknisi datang sesuai janji, bekerja cepat, dan membersihkan area kerja setelah selesai. Sangat puas dengan pelayanannya."</p>
+                    <span class="testimoni-service">Pasang kWh Meter</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimoni -->
+    <section class="video-testimoni">
+        <div class="container">
+            <h2 class="section-title">Testimoni Video</h2>
+            <p class="section-subtitle">Dengarkan pengalaman langsung dari pelanggan kami melalui testimoni video.</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Testimoni Instalasi Listrik">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Instalasi Listrik Rumah 2 Lantai</h3>
+                        <p>Bapak Hendra membagikan pengalamannya menggunakan jasa ListrikPro untuk instalasi listrik rumah baru 2 lantai di daerah BSD.</p>
+                        <div class="video-client">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Hendra Kurniawan</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80" alt="Testimoni Perbaikan Listrik">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Perbaikan Listrik Restoran 24 Jam</h3>
+                        <p>Ibu Santi pemilik restoran 24 jam di Jakarta Pusat menceritakan pengalamannya ketika listrik restorannya bermasalah di tengah malam.</p>
+                        <div class="video-client">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Santi Wijaya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Bergabung dengan Pelanggan Puas Kami</h2>
+            <p class="cta-text">Jangan hanya membaca testimoni orang lain. Rasakan sendiri pengalaman layanan listrik profesional dari ListrikPro. Hubungi kami sekarang untuk konsultasi gratis dan perkiraan biaya.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/6281234567890?text=Halo%20ListrikPro,%20saya%20ingin%20konsultasi%20tentang%20listrik" class="primary-btn">
+                    <i class="fab fa-whatsapp"></i> Konsultasi Sekarang
+                </a>
+                <a href="index.html" class="secondary-btn">
+                    <i class="fas fa-home"></i> Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>ListrikPro</span>
+                    </div>
+                    <p class="footer-description">
+                        Solusi listrik profesional untuk kebutuhan rumah, kantor, dan bisnis Anda. Dengan tim teknisi bersertifikat dan pengalaman lebih dari 10 tahun.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Tentang</h3>
+                        <ul>
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="testimoni.html">Testimoni</a></li>
+                            <li><a href="#">Sertifikasi</a></li>
+                            <li><a href="#">Karir</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Layanan</h3>
+                        <ul>
+                            <li><a href="#">Instalasi Listrik</a></li>
+                            <li><a href="#">Perbaikan Listrik</a></li>
+                            <li><a href="#">Pasang MCB</a></li>
+                            <li><a href="#">Tambah Daya</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Kontak</h3>
+                        <ul>
+                            <li><a href="tel:+6281234567890">0812-3456-7890</a></li>
+                            <li><a href="mailto:info@listrikpro.com">info@listrikpro.com</a></li>
+                            <li><a href="#">Jakarta, Indonesia</a></li>
+                            <li><a href="testimoni.html">Testimoni</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 ListrikPro. Solusi listrik profesional untuk Anda.
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Netlify Badge -->
+    <div class="netlify-badge">
+        <a href="https://www.netlify.com" target="_blank">
+            <svg width="60" height="60" viewBox="0 0 114 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.8 99.5H0.5V0.5H99.5V52.8H52.8V99.5Z" fill="#00AD9F"/>
+                <path d="M99.5 52.8H52.8V99.5H99.5V52.8Z" fill="#00AD9F"/>
+                <path d="M52.8 0.5H0.5V52.8H52.8V0.5Z" fill="#00AD9F"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
