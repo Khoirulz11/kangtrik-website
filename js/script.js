@@ -1,5 +1,3 @@
-// script.js - JavaScript UNIFIED untuk semua halaman ListrikPro
-
 // ========== MOBILE MENU FUNCTIONALITY ==========
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -267,4 +265,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run header scroll on scroll
     window.addEventListener('scroll', handleHeaderScroll);
+
 });
